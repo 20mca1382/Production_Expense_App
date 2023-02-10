@@ -21,9 +21,9 @@ app.use(cors())
 // app.get('/', (req,res)=>{
 //     res.send('<h1>Hello from server</h1>')
 // })
-app.use('/users', require('./routes/userRoute'))
+app.use('/api/v1/users', require('./routes/userRoute'))
 //transection routes
-app.use('/transections', require("./routes/transactionRoutes"))
+app.use('/api/v1/transections', require("./routes/transactionRoutes"))
 
 //static files
 app.use(express.static(path.join(__dirname, './client/build')))
